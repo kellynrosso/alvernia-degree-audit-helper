@@ -1,0 +1,100 @@
+[
+  {
+    "input": "400 Saint Bernardine Street, Reading, PA 19607",
+    "matches": [
+      {
+        "address": "400 ST BERNARDINE ST, READING, PA, 19607",
+        "coordinates": {
+          "x": -75.931595258956,
+          "y": 40.311346667459
+        }
+      }
+    ],
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=400+Saint+Bernardine+Street%2C+Reading%2C+PA+19607&benchmark=Public_AR_Current&format=json"
+  },
+  {
+    "input": "401 Penn Street, Reading, PA 19601",
+    "matches": [
+      {
+        "address": "401 PENN ST, READING, PA, 19601",
+        "coordinates": {
+          "x": -75.929766238442,
+          "y": 40.335402062412
+        }
+      }
+    ],
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=401+Penn+Street%2C+Reading%2C+PA+19601&benchmark=Public_AR_Current&format=json"
+  },
+  {
+    "input": "500 Progress Avenue, Pottsville, PA 17901",
+    "matches": [
+      {
+        "address": "500 N PROGRESS AVE, POTTSVILLE, PA, 17901",
+        "coordinates": {
+          "x": -76.196512674437,
+          "y": 40.688782967663
+        }
+      }
+    ],
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=500+Progress+Avenue%2C+Pottsville%2C+PA+17901&benchmark=Public_AR_Current&format=json"
+  },
+  {
+    "input": "520 Hamilton Street, Allentown, PA",
+    "matches": [
+      {
+        "address": "520 W HAMILTON ST, ALLENTOWN, PA, 18101",
+        "coordinates": {
+          "x": -75.468641736574,
+          "y": 40.602999724036
+        }
+      },
+      {
+        "address": "520 E HAMILTON ST, ALLENTOWN, PA, 18109",
+        "coordinates": {
+          "x": -75.445289200981,
+          "y": 40.610585717584
+        }
+      }
+    ],
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=520+Hamilton+Street%2C+Allentown%2C+PA&benchmark=Public_AR_Current&format=json"
+  },
+  {
+    "input": "340 DeKalb Pike, Blue Bell, PA",
+    "matches": [
+      {
+        "address": "340 DEKALB PIKE, BLUE BELL, PA, 19422",
+        "coordinates": {
+          "x": -75.280467409849,
+          "y": 40.176767006082
+        }
+      }
+    ],
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=340+DeKalb+Pike%2C+Blue+Bell%2C+PA&benchmark=Public_AR_Current&format=json"
+  },
+  {
+    "input": "101 College Drive, Pottstown, PA",
+    "matches": [
+      {
+        "address": "101 COLLEGE DR, POTTSTOWN, PA, 19464",
+        "coordinates": {
+          "x": -75.657477050564,
+          "y": 40.244873371271
+        }
+      }
+    ],
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=101+College+Drive%2C+Pottstown%2C+PA&benchmark=Public_AR_Current&format=json"
+  },
+  {
+    "input": "2001 West Lehigh Avenue, Philadelphia, PA",
+    "matches": [
+      {
+        "address": "2001 W LEHIGH AVE, PHILADELPHIA, PA, 19132",
+        "coordinates": {
+          "x": -75.164155332463,
+          "y": 39.995235027793
+        }
+      }
+    ],
+    "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2001+West+Lehigh+Avenue%2C+Philadelphia%2C+PA&benchmark=Public_AR_Current&format=json"
+  }
+]

@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const c=require('./core.js'),campuses=require('./data.js');
+let count=0;function test(name,fn){fn();count++;console.log('PASS '+name);}
+const r={name:'Test support service',description:'Temporary test fixture, not a campus claim.',campus:'hill',category:'Learning',lat:40.31,lon:-75.93,source:'https://www.alvernia.edu/',verifiedOn:'2026-10-30',accessibility:'Not verified'};
+test('YouTube watch, short, embed, and shorts URLs',()=>{for(const u of ['https://www.youtube.com/watch?v=abcdefghijk','https://youtu.be/abcdefghijk?t=3','https://www.youtube.com/embed/abcdefghijk','https://youtube.com/shorts/abcdefghijk'])assert.equal(c.youtubeId(u),'abcdefghijk');});
+test('Reject lookalike and executable video URLs',()=>{for(const u of ['https://youtube.com.evil.test/watch?v=abcdefghijk','javascript:alert(1)','https://notyoutube.com/watch?v=abcdefghijk','https://youtu.be/too-short'])assert.equal(c.youtubeId(u),null);});
+test('Reject unsafe source schemes and embedded credentials',()=>{for(const u of ['javascript:alert(1)','data:text/html,test','file:///etc/passwd','https://name:secret@example.com'])assert.equal(c.safeUrl(u),null);});
+test('Reject blank, NaN, infinity, and out-of-range coordinates',()=>{for(const v of ['',null,'word',Infinity,91])assert.throws(()=>c.validateResource({...r,lat:v},campuses));for(const v of [-181,181])assert.throws(()=>c.validateResource({...r,lon:v},campuses));});
+test('Valid record retains unknown access information',()=>assert.equal(c.validateResource(r,campuses).accessibility,'Not verified'));
+test('Reject unknown campus/category and missing evidence',()=>{for(const override of [{campus:'invented'},{category:'unknown'},{source:''},{verifiedOn:''},{verifiedOn:'2026-02-31'},{name:''}])assert.throws(()=>c.validateResource({...r,...override},campuses));});
+test('Five distinct student resources, separate from seven campus pins',()=>{const result=c.mergeResources([],Array.from({length:5},(_,i)=>({...r,name:'Test resource '+i})),campuses);assert.equal(result.length,5);assert.equal(campuses.length,7);assert.equal(new Set(result.map(x=>x.id)).size,5);});
+test('Duplicate import updates without inflating the count',()=>{const first=c.mergeResources([],[r],campuses);const result=c.mergeResources(first,[{...r,name:r.name.toUpperCase(),description:'Updated fixture'}],campuses);assert.equal(result.length,1);assert.equal(result[0].id,first[0].id);assert.equal(result[0].description,'Updated fixture');});
+test('Malformed imports fail atomically',()=>{const existing=c.mergeResources([],[r],campuses);assert.throws(()=>c.mergeResources(existing,[{...r,name:'Second'},{...r,lat:'invalid'}],campuses));assert.equal(existing.length,1);assert.throws(()=>c.mergeResources(existing,{},campuses));});
+test('Search and category constraints intersect',()=>{assert.equal(c.filterResources(campuses,'POTTSVILLE','Learning').length,1);assert.equal(c.filterResources(campuses,'Pottsville','Community').length,0);assert.equal(c.filterResources(campuses,'no-such-service').length,0);});
+console.log(count+' test groups passed. Live rendering is a separate manual check.');

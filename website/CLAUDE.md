@@ -1,0 +1,1 @@
+Read AGENTS.md and TASK.md first. Follow those project instructions. Keep changes bounded, preserve sourced campus data and access notes, and run node test-core.js. Project skill examples are in .claude/skills.

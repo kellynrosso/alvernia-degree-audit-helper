@@ -1,0 +1,1 @@
+Read AGENTS.md and TASK.md first. Follow those project instructions. Ask for any missing source evidence before adding a real campus claim. Run node test-core.js and record actual checks in TEST_LOG.md.

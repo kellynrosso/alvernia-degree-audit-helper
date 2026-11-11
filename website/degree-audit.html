@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A student-designed demonstration with fictional degree requirement examples and a sample progress checklist.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Alvernia Degree Audit Helper · Student Demonstration</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="degree-audit.js" defer></script>
+</head>
+<body class="degree-audit-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="prototype-bar"><span>AI 101 · STUDENT DESIGN LAB</span><span>A classroom prototype · <a href="https://www.alvernia.edu/" target="_blank" rel="noopener">Official Alvernia website ↗</a></span></div>
+<header class="site-header">
+<a class="brand" href="index.html" aria-label="Alvernia Campus Resource Studio home"><img src="assets/logo.svg" alt="Alvernia University" width="196" height="74"></a>
+<button class="menu-toggle" id="audit-menu-toggle" aria-expanded="false" aria-controls="audit-nav">Menu ☰</button>
+<nav id="audit-nav" aria-label="Main navigation"><a href="index.html#discover">Our locations</a><a href="index.html#explore">Campus map</a><a href="index.html#studio">AI Center studio</a><a href="degree-audit.html" aria-current="page">Degree Audit Helper</a></nav>
+<div class="header-actions"><a class="button gold compact" href="index.html">CAMPUS EXPLORER <span>↗</span></a></div>
+</header>
+<main id="main">
+<section class="audit-intro wrap" aria-labelledby="audit-title">
+<p class="eyebrow">AI 101 · STUDENT-DESIGNED DEMONSTRATION</p>
+<h1 id="audit-title">Alvernia Degree Audit Helper</h1>
+<p class="audit-lede">Explore a fictional set of degree-planning examples and try a sample progress checklist. These invented categories are for demonstrating the interaction, not describing Alvernia degree requirements.</p>
+<div class="audit-disclaimer"><strong>Not an official degree audit.</strong> This page uses fictional examples, does not determine graduation eligibility, and is not connected to student accounts or university systems. Confirm your requirements with an academic advisor.</div>
+</section>
+<section class="audit-workspace wrap" aria-label="Fictional degree requirement checklist">
+<div class="audit-progress-section" aria-labelledby="audit-progress-title">
+<div class="audit-progress-heading"><div><p class="eyebrow">SAMPLE CHECKLIST</p><h2 id="audit-progress-title">Your demonstration progress</h2></div><strong class="audit-percentage" id="audit-percentage">0%</strong></div>
+<div class="audit-progress-line"><progress id="audit-progress" max="6" value="0" aria-label="Fictional sample requirement areas marked complete">0%</progress></div>
+<p class="audit-progress-status" id="audit-progress-status" role="status" aria-live="polite">0 of 6 fictional sample areas marked complete. Demonstration only.</p>
+<p class="audit-progress-note">Each checked item counts as one sample area. This is not a credit count or an eligibility calculation.</p>
+<button class="text-link audit-reset" id="audit-reset" type="button">Reset sample checklist</button>
+</div>
+<div class="audit-requirements-heading"><div><p class="eyebrow">FICTIONAL EXAMPLES</p><h2>Sample requirement areas</h2></div><p>Open each explanation, then mark an item complete to try the tracker.</p></div>
+<ul class="audit-requirements">
+<li class="audit-requirement">
+<div class="audit-requirement-row"><h3 id="req-foundations">Foundational Studies</h3><label class="audit-check-label"><input type="checkbox" name="sample-requirement" aria-labelledby="req-foundations"><span>Mark complete</span></label></div>
+<details><summary>What does this sample requirement mean?</summary><p>This fictional example represents a group of introductory learning experiences. It is included to show how a broad requirement might be described; it is not an Alvernia course or policy.</p></details>
+</li>
+<li class="audit-requirement">
+<div class="audit-requirement-row"><h3 id="req-communication">Communication Practice</h3><label class="audit-check-label"><input type="checkbox" name="sample-requirement" aria-labelledby="req-communication"><span>Mark complete</span></label></div>
+<details><summary>What does this sample requirement mean?</summary><p>This fictional example focuses on practicing clear communication in more than one format. The description is illustrative and does not identify a real course or required skill category.</p></details>
+</li>
+<li class="audit-requirement">
+<div class="audit-requirement-row"><h3 id="req-quantitative">Quantitative Inquiry</h3><label class="audit-check-label"><input type="checkbox" name="sample-requirement" aria-labelledby="req-quantitative"><span>Mark complete</span></label></div>
+<details><summary>What does this sample requirement mean?</summary><p>This invented area is an example of learning to interpret information and use evidence to answer a question. It is not an official requirement.</p></details>
+</li>
+<li class="audit-requirement">
+<div class="audit-requirement-row"><h3 id="req-pathway">Major Pathway</h3><label class="audit-check-label"><input type="checkbox" name="sample-requirement" aria-labelledby="req-pathway"><span>Mark complete</span></label></div>
+<details><summary>What does this sample requirement mean?</summary><p>This fictional placeholder stands for coursework related to a student's area of study. Actual programs can have different structures and requirements; ask an academic advisor about your program.</p></details>
+</li>
+<li class="audit-requirement">
+<div class="audit-requirement-row"><h3 id="req-applied">Applied Learning</h3><label class="audit-check-label"><input type="checkbox" name="sample-requirement" aria-labelledby="req-applied"><span>Mark complete</span></label></div>
+<details><summary>What does this sample requirement mean?</summary><p>This invented example represents applying ideas through a project or practice activity. It does not claim that any specific experience is required or offered by Alvernia.</p></details>
+</li>
+<li class="audit-requirement">
+<div class="audit-requirement-row"><h3 id="req-capstone">Integrative Project</h3><label class="audit-check-label"><input type="checkbox" name="sample-requirement" aria-labelledby="req-capstone"><span>Mark complete</span></label></div>
+<details><summary>What does this sample requirement mean?</summary><p>This fictional final example shows how a program might ask students to bring together learning from multiple areas. It is not an official capstone or graduation requirement.</p></details>
+</li>
+</ul>
+<noscript><p class="audit-noscript">The sample explanations are available above. Enable JavaScript to update the demonstration progress tracker.</p></noscript>
+</section>
+</main>
+<footer><div class="wrap footer-top"><div><img src="assets/logo-white.svg" alt="Alvernia University" width="210"><p>Campus Resource Studio<br><span>AI 101 · Learn by building for others.</span></p></div><div><h3>Explore</h3><a href="index.html#explore">Campus map</a><a href="degree-audit.html">Degree Audit Helper</a><a href="index.html#studio">AI Center studio</a></div><div><h3>Keep learning</h3><a href="https://www.alvernia.edu/" target="_blank" rel="noopener">Official Alvernia website ↗</a><a href="SOURCES.md">Sources & image credits</a></div></div><div class="wrap footer-bottom"><p>Educational redesign · not the official Alvernia website. University marks © Alvernia University.</p><p>Fictional examples · confirm degree requirements with an academic advisor.</p></div></footer>
+</body>
+</html>
